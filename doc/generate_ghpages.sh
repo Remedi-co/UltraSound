@@ -15,6 +15,8 @@ if [ "${current_dir}" == "remedi" ]; then
 
     cp -R ./doc/html/* ../doc/html
 
+    cd ../doc/html
+
     git add -A
     git commit -m "Updated docs"
 else
