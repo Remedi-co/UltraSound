@@ -1,0 +1,40 @@
+/*! \page system_description System Description
+    \brief Describes an UltraSound system from a High Level
+
+    \tableofcontents
+
+    Ultrasound imaging provides medical personnel the chance to non-instrusive diagnostics. The biggest advantage over other techniques is that it doesn’t rely on electromagnetic radiation. It is used for a wide range of diagnostics.
+    The average system in use in hospitals today can cost up to 40.000 euros. Although a basic version could be realized at a fraction of that cost using of-the-shelf hardware.
+    Decomposition of an ultrasound system
+
+    According to sprab18a the following subsystems make up an ultrasound system
+
+    - \ref transducer
+    - \ref front_end
+    - \ref mid_end
+    - \ref back_end
+    - \ref system_controller
+    - Display
+    - Power supply
+
+    \section transducer Transducer
+
+    The sensor of the system, usually consisting of multiple piezo-electric elements which can send ultrasonic pulses of 5-10 MHz.
+
+    \section front_end Front-end processing
+
+    The front-end processing controls the analogue part of the system. It is responsible for forming the beams and converting the received beams to scan lines. All of this is controlled by the front-end controller.
+
+    \section mid_end Mid-end processing
+
+    The mid-end processing part of the system converts the raw scan lines into images. Ultrasound systems have multiple modes of operating. B-mode is the well known grayscale image. Color flow is super-imposed on the B-mode image and depicts the flow of blood. Doppler mode shows the flow of blood at a specific location.
+
+    \section back_end Back-end processing
+
+    Back-end processing takes the output of the mid-end processing and tries using image processing algorithms to improve the quality by removing noise. It also converts the scanlines to raster data ready for display.
+
+    \section system_controller System controller
+
+    The system controller coordinates all subsystems and handles all interactions with the user.
+
+*/
