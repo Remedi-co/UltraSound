@@ -9,6 +9,8 @@ A high-level description of the system is given in the \ref system_description.
 Some \ref requirements have been created, but these are still very much open to
  discussion.
 
+The compiled documentation can be read at http://remediosm.github.io/UltraSound/
+
 Compiling
 ---------
 
