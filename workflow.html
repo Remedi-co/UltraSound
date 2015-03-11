@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>RemediUltraSound: Licensing</title>
+<title>RemediUltraSound: Workflow</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -76,22 +76,44 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Licensing </div>  </div>
+<div class="title">Workflow </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#lic_doc">Licensing of documentation</a></li>
-<li class="level1"><a href="#lic_src">Licensing of source code</a></li>
+<ul><li class="level1"><a href="#workflow_intro">Workflow</a></li>
+<li class="level1"><a href="#workflow_setup">Setting up</a></li>
+<li class="level1"><a href="#workflow_start">Starting on your feature</a></li>
+<li class="level1"><a href="#workflow_finish">Finish work</a></li>
+<li class="level1"><a href="#workflow_cleanup">Cleanup</a></li>
 </ul>
 </div>
-<div class="textblock"><p>This page describes the licencing for the Remedi UltraSound system.</p>
-<h1><a class="anchor" id="lic_doc"></a>
-Licensing of documentation</h1>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>determine licensing</dd></dl>
-<h1><a class="anchor" id="lic_src"></a>
-Licensing of source code</h1>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>determine licensing</dd></dl>
-</div></div><!-- contents -->
+<div class="textblock"><p>This page describes the workflow for the Remedi UltraSound project.</p>
+<h1><a class="anchor" id="workflow_intro"></a>
+Workflow</h1>
+<p>This project works following the git-flow branching model. Each feature is developed on a feature branch, branched of of develop. Check out <a href="http://nvie.com/posts/a-successful-git-branching-model/">http://nvie.com/posts/a-successful-git-branching-model/</a> for more info.</p>
+<p>The below workflow is based on <a href="http://qq.is/tutorial/2011/10/23/git-flow-on-github.html">http://qq.is/tutorial/2011/10/23/git-flow-on-github.html</a></p>
+<h1><a class="anchor" id="workflow_setup"></a>
+Setting up</h1>
+<p>First clone the repository </p><pre class="fragment">git clone https://github.com/RemediOSM/UltraSound.git
+</pre><p>Go into the repo </p><pre class="fragment">cd UltraSound
+</pre><p>Setup the origin </p><pre class="fragment">git remote add upstream git@github.com:RemediOSM@UltraSound
+</pre><p>Setup git flow (first install git flow if you haven't got it) </p><pre class="fragment">git flow init
+</pre><p>And accept all the defaults</p>
+<h1><a class="anchor" id="workflow_start"></a>
+Starting on your feature</h1>
+<p>Create a new branch for your awesome feature </p><pre class="fragment">git flow feature start &lt;my_great_feature&gt;
+</pre><p>Push the branch remote. </p><pre class="fragment">git flow feature publish &lt;my_great_feature&gt;
+</pre><p>Commit your changes reguraly locally with descriptive messages.</p>
+<p>Also push the changes back up to GitHub. </p><pre class="fragment">git push origin HEAD
+</pre><h1><a class="anchor" id="workflow_finish"></a>
+Finish work</h1>
+<p>Create a pull request in the GitHub interface. In the pull request add usefull info. Click the send pull request to confirm you think you're done.</p>
+<p>When your awesome feature is reviewed, sometimes additional changes are needed. Make them locally, commit and push them up to your branch.</p>
+<p>Make sure your on your feature branch: </p><pre class="fragment">git checkout feature/&lt;my_awesome_feature&gt;
+</pre><p>Do your development, commit and push the changes again. (see <a class="el" href="workflow.html#workflow_start">Starting on your feature</a>).</p>
+<h1><a class="anchor" id="workflow_cleanup"></a>
+Cleanup</h1>
+<p>When all your changes are agreed upon and merged by the project, your feature branch will be deleted. Locally you can finish your feature as well. </p><pre class="fragment">git flow feature finish</pre> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated on Thu Mar 12 2015 00:04:25 for RemediUltraSound by &#160;<a href="http://www.doxygen.org/index.html">
