@@ -1,0 +1,67 @@
+/*! \page workflow Workflow
+  \brief This page describes the workflow for the Remedi UltraSound project.
+
+  \tableofcontents
+
+  \section workflow_intro Workflow
+  This project works following the git-flow branching model. Each feature is 
+  developed on a feature branch, branched of of develop. 
+  Check out http://nvie.com/posts/a-successful-git-branching-model/ for more info.
+
+  The below workflow is based on http://qq.is/tutorial/2011/10/23/git-flow-on-github.html
+
+  \section workflow_setup Setting up
+  First clone the repository
+
+      git clone https://github.com/RemediOSM/UltraSound.git
+
+  Go into the repo
+
+      cd UltraSound
+
+  Setup the origin  
+
+      git remote add upstream git@github.com:RemediOSM@UltraSound
+
+  Setup git flow (first install git flow if you haven't got it)
+
+      git flow init
+
+  And accept all the defaults
+
+  \section workflow_start Starting on your feature
+  Create a new branch for your awesome feature
+
+      git flow feature start <my_great_feature>
+
+  Push the branch remote.
+
+      git flow feature publish <my_great_feature>
+
+  Commit your changes reguraly locally with descriptive messages.
+
+  Also push the changes back up to GitHub.
+
+      git push origin HEAD
+
+  \section workflow_finish Finish work
+
+  Create a pull request in the GitHub interface. In the pull request add usefull info.
+  Click the send pull request to confirm you think you're done.
+
+  When your awesome feature is reviewed, sometimes additional changes are needed.
+  Make them locally, commit and push them up to your branch.
+
+  Make sure your on your feature branch:
+
+      git checkout feature/<my_awesome_feature>
+
+  Do your development, commit and push the changes again. (see \ref workflow_start).
+
+  \section workflow_cleanup Cleanup
+
+  When all your changes are agreed upon and merged by the project, your feature branch
+  will be deleted. Locally you can finish your feature as well.
+
+      git flow feature finish
+*/
