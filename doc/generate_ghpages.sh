@@ -29,7 +29,6 @@ copy_pdf_to_doc_root() {
     make pdf
     cd -
 
-    echo  "$gh_pages_branch_dir/$pdf_file_name"
     cp ./doc/latex/refman.pdf "$gh_pages_branch_dir/$pdf_file_name"
 }
 
